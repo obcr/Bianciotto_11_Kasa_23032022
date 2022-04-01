@@ -1,0 +1,13 @@
+.navigation {
+  display: flex;
+  a {
+    text-decoration: none;
+    font-family: $font-1;
+    font-size: 18px;
+    color: $color-1;
+    margin-left: 10px;
+    &:hover {
+      text-decoration-line: underline;
+    }
+  }
+}

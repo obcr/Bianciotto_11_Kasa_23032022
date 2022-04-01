@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'font-1';
+  src: url(../asset/fonts/Montserrat-VariableFont_wght.ttf);
+}
+
+$font-1: 'font-1', sans-serif;
+
+$color-1: #ff6060;
+$color-2: #f6f6f6;
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+li {
+  list-style-type: none;
+}

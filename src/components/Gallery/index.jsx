@@ -32,7 +32,7 @@ setData(res.data)});
                             const path = '/Accommodation/' + dataAppartement.id
                         return (
                             
-                            <Link to={path}><Thumb key={idKey} dataAppartement={dataAppartement}/></Link>
+                            <Link to={path} key={idKey}><Thumb key={idKey} dataAppartement={dataAppartement}/></Link>
 
             )})}
             </ul>

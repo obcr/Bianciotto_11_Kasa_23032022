@@ -8,10 +8,16 @@ const [data, setData] = useState([]);
 const [rangeValue, setRangeValue] = useState([6]);
 
 useEffect(() => {
-axios.get('./flat.json').then((res) => {console.log('data egale', res.data)
+axios.get('./flat.json').then((res) => {
 setData(res.data)});
 
 },[])
+
+// useEffect(() => {
+//     axios.get('./flat.json').then((res) => {console.log('data egale', res.data)
+//     setData(res.data)});
+    
+//     },[])
 
     return (
         <div className='gallery'>

@@ -1,31 +1,36 @@
 .dropDownLarge-item {
-    max-width: 582px;
+  display: flex;
+  flex-direction: column;
+    width: 1023px;
+    min-width: 335px;
+    height: 47px;
     list-style: none;
+    .dropDownLarge-toggle {
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      font-family: $font-1;
+      font-size: 18px;
+      color: #fff;
+      background-color: $color-1;
+      border-radius: 5px;
+      padding: 1em;
+    }
+    .dropDownLarge-toggle:hover {
+      background-color: $color-1;
   }
-  .dropDownLarge-toggle {
-    cursor: pointer;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    font-family: $font-1;
-    font-size: 18px;
-    color: #fff;
-    background-color: $color-1;
-    border-radius: 10px;
-    padding: 1em;
+    .dropDownLarge-toggle h3 {
+      margin: 0;
+    }
+    .dropDownLarge-content {
+      // background-color: #F6F6F6;
+      background-color: #9c9c9c;
+      padding: 1em;
+      border-radius: 5px;
   }
-  .dropDownLarge-toggle:hover {
-    background-color: $color-1;
-}
-  .dropDownLarge-toggle h3 {
-    margin: 0;
   }
-  .dropDownLarge-content {
-    // background-color: #F6F6F6;
-    background-color: #9c9c9c;
-    padding: 1em;
-    border-radius: 10px;
-}
+  
 .chevron_down_solid {
     width: 30PX;
 }

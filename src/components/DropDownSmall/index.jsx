@@ -12,7 +12,7 @@ const DropDownSmall = ({ dataAppartement }) => {
       <div className="dropDownSmall-toggle" onClick={() => setIsActive(!isActive)}>
         <h3>Équipements</h3><span>{isActive ? <img className='chevron_up_solid' src={chevron_up_solid} alt='chevron_up_solid' /> : <img className='chevron_down_solid' src={chevron_down_solid} alt='chevron_down_solid' />}</span>
       </div>
-      {isActive && <div className="dropDownSmall-content">testdsjclsjdljsdlkjclksdjlkd</div>}
+      {isActive && <div className="dropDownSmall-content"></div>}
     </li>
   );
 };

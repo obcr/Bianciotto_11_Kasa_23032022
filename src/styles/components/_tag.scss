@@ -1,7 +1,9 @@
 .tag{
     display: flex;
-    max-width: 115px;
+    width: 115px;
     height: 25px;
+    align-items: center;
+    justify-content: center;
     font-family: $font-1;
     font-size: 7px;
     color: #fff;

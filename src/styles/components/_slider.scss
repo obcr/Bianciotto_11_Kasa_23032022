@@ -6,6 +6,11 @@
     height: 415px;
     border-radius: 25px;
     background-color: $color-1;
+    .sliderPicture{
+        img{
+            object-fit: cover;
+        }
+    }
     .chevron_left_solid {
         z-index: 999;
         width: 46.68px;

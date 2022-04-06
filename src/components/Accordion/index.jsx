@@ -5,7 +5,7 @@ import chevron_down_solid from '../../asset/img/chevron_down_solid.png'
 
 // import "./accordion.css";
 
-const DropDownSmall = ({ dataAppartement }) => {
+const Accordion = ({ dataAppartement }) => {
   const [isActive, setIsActive] = useState(false);
   return (
     <li className="dropDownSmall-item">
@@ -17,4 +17,4 @@ const DropDownSmall = ({ dataAppartement }) => {
   );
 };
 
-export default DropDownSmall;
+export default Accordion;

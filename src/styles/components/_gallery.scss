@@ -2,12 +2,14 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 1240px;
+  min-width: 380px;
   margin: auto;
   margin-bottom: 50px;
-  background-color: $color-2;
+  background-color: #f6f6f6;
   border-radius: 25px;
   padding-top: 25px;
   padding-bottom: 25px;
+  justify-content: space-around;
   ul {
     display: flex;
     flex-wrap: wrap;

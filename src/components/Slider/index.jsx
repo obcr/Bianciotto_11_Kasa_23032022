@@ -4,10 +4,13 @@ import chevron_right_solid from '../../asset/img/chevron_right_solid.png'
 
 const Slider = ({pictures}) => {
     console.log(pictures);
+
     return (
         <div className='slider'>
-             <img src={pictures} alt={"nom " + pictures}/>
-             <h1></h1>
+             {/* {pictures.map((picture) => (
+        <img src={picture} alt="" />
+      ))} */}
+
             <img className='chevron_left_solid' src={chevron_left_solid} alt='chevron_left_solid' />
             <img className='chevron_right_solid' src={chevron_right_solid} alt='chevron_right_solid' />
         </div>

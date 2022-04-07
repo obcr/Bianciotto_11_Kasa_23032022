@@ -12,7 +12,7 @@ const Accommodation = () => {
 // console.log('id du logement', id);
 
 const [dataAccommodation, setDataAccommodation] = useState([]);
-const { pictures, title, location, tags, rating, description, equipments } = dataAccommodation
+const { pictures, title, location, tags, host, rating, description, equipments } = dataAccommodation
 
 useEffect(() => {
     axios.get('../flat.json').then((res) => {console.log('Data Accommodation Egale', res.data)
@@ -33,8 +33,8 @@ console.log('Data Accommodation Egale Id', dataAccommodation);
                         {/* <div className="hostDetails">
                             <span className="hostName">{host.name}</span>
                             <img src={host.picture} alt={host.name + "photo de profil"} className="hostPicture"/>
-                        </div>
-                    </div> */}
+                        </div> */}
+                    
                     <div className="tagSection">
                         <Tags tags={tags}/>
                         <Rating rating={rating}/>
@@ -50,6 +50,9 @@ console.log('Data Accommodation Egale Id', dataAccommodation);
 };
 
 export default Accommodation;
+
+
+
 
 
 

@@ -1,20 +1,46 @@
 import React, { useState } from "react";
 import chevron_up_solid from '../../asset/img/chevron_up_solid.png'
-import chevron_down_solid from '../../asset/img/chevron_down_solid.png'
 
 
-// import "./accordion.css";
+const Accordion = ({ content, header, defaultOpen }) => {
 
-const Accordion = ({ dataAppartement }) => {
-  const [isActive, setIsActive] = useState(false);
-  return (
-    <li className="dropDownSmall-item">
-      <div className="dropDownSmall-toggle" onClick={() => setIsActive(!isActive)}>
-        <h3>Équipements</h3><span>{isActive ? <img className='chevron_up_solid' src={chevron_up_solid} alt='chevron_up_solid' /> : <img className='chevron_down_solid' src={chevron_down_solid} alt='chevron_down_solid' />}</span>
+  const [isOpen, setState] = useState(defaultOpen)
+
+  let displayedContent
+  (typeof content === 'string') ? displayedContent = [content] : displayedContent = content
+  
+  return ( 
+      <div className="accordion">
+          <div className="accordion-header" onClick={() => setState(!isOpen)}>
+              <span className="accordion-title">{header}</span>
+              <img src={chevron_up_solid} alt="arrow" className="accordion-arrow" onClick={() => setState(!isOpen)}/>
+          </div>
+          <div className={isOpen ? 'accordion-content' : 'accordion-content__hidden'}>
+          {/* {
+              displayedContent.map(item => {
+                  return (
+                      <span key={item+"_key"}>
+                          {item}
+                          <br />
+                      </span>
+                  )
+                  })
+          } */}
+          </div>
       </div>
-      {isActive && <div className="dropDownSmall-content"></div>}
-    </li>
-  );
-};
+   );
+}
 
 export default Accordion;
+
+
+
+
+
+
+
+
+
+
+
+

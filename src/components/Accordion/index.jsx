@@ -16,7 +16,7 @@ const Accordion = ({ content, header, defaultOpen }) => {
               <img src={chevron_up_solid} alt="arrow" className="accordion-arrow" onClick={() => setState(!isOpen)}/>
           </div>
           <div className={isOpen ? 'accordion-content' : 'accordion-content__hidden'}>
-          {/* {
+          {
               displayedContent.map(item => {
                   return (
                       <span key={item+"_key"}>
@@ -25,7 +25,7 @@ const Accordion = ({ content, header, defaultOpen }) => {
                       </span>
                   )
                   })
-          } */}
+          }
           </div>
       </div>
    );

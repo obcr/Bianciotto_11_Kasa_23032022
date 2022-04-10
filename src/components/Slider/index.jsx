@@ -1,25 +1,60 @@
 import React from 'react';
 import { useState } from 'react';
-import chevron_left_solid from '../../asset/img/chevron_left_solid.png'
-import chevron_right_solid from '../../asset/img/chevron_right_solid.png'
+import Direction from '../../components/Direction'
 
-const Slider = ({pictures}) => {
-    console.log("Test picture affichage", pictures);
 
-    return (
-        <div className='slider'>
-            {/* {
-                pictures.map((picture) => (
-                    <div key={'slide'} className="sliderPicture">
+const Slider = ({ pictures }) => {
+
+    const [sliderAnimation, setSliderAnimation] = useState({
+        index: 0,
+        inProgress: false,
+    })
+
+    const nextSlide = () => {
+        if (sliderAnimation.inProgress) return
+        let index = sliderAnimation.index
+        if(sliderAnimation.index < pictures.length - 1) index++
+        else index = 0
+        setSliderAnimation({
+            index: index,
+            inProgress: true,
+        })
+        setTimeout(() => setSliderAnimation({
+            index: index,
+            inProgress: false,
+        }), 400)
+    }
+
+    const previousSlide = () => {
+        if (sliderAnimation.inProgress) return
+        let index = sliderAnimation.index
+        if(sliderAnimation.index > 0) index--
+        else index = pictures.length - 1
+        setSliderAnimation({
+            index: index,
+            inProgress: true,
+        })
+        setTimeout(() => setSliderAnimation({
+            index: index,
+            inProgress: false,
+        }), 400)
+    }
+
+    return ( 
+        <div className="slider">
+            {
+                pictures.map((picture, index) => sliderAnimation.index === index && (
+                    <div key={'slider-' + index} className="slider-picture">
                         <img src={picture} alt="" />
                     </div>
                 ))
-                } */}
-            <img className='chevron_left_solid' src={chevron_left_solid} alt='chevron_left_solid' />
-            <img className='chevron_right_solid' src={chevron_right_solid} alt='chevron_right_solid' />
+                }
+            {<Direction direction="previous" goTo={previousSlide}/>}
+            {<Direction direction="next" goTo={nextSlide}/>}
+            <div className="slider-counter">{sliderAnimation.index + 1} / {pictures.length}</div>
         </div>
-    );
-};
+     );
+}
 
 export default Slider;
 

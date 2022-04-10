@@ -9,43 +9,46 @@ import Rating from '../../components/Rating';
 
 const Accommodation = () => {
     const { id } = useParams();
-// console.log('id du logement', id);
 
-const [dataAccommodation, setDataAccommodation] = useState([]);
-const { pictures, title, location, tags, host, rating, description, equipments } = dataAccommodation
+const [dataAccommodation, setDataAccommodation] = useState("");
 
 useEffect(() => {
-    axios.get('../flat.json').then((res) => {console.log('Data Accommodation Egale', res.data)
-    setDataAccommodation(res.data.find(dataAppartement => dataAppartement.id === id))});
-    
+    axios.get('../flat.json').then((res) => {console.log('Data Egale', res.data);
+    console.log('Data id', id)
+    setDataAccommodation(res.data.find(dataAppartement => dataAppartement.id === id))
+    console.log(res.data.find(dataAppartement => dataAppartement.id === id));
+    console.log('Data Accommodation Egale quoi', dataAccommodation);
+});
     },[id])
 
-console.log('Data Accommodation Egale Id', dataAccommodation);
-
     return (
-<div className='bodyAccommodationId'>
-    <div className='topSlider'><Slider pictures={pictures} alt={title}/></div>
-            <div className="infoSection">
-                    <div className="infoSectionLocation">
-                            <h1 className="infoSectionTitle">{title}</h1>
-                            <span>{location}</span>
-                    </div>
-                        {/* <div className="hostDetails">
-                            <span className="hostName">{host.name}</span>
-                            <img src={host.picture} alt={host.name + "photo de profil"} className="hostPicture"/>
-                        </div> */}
-                    
-                    <div className="tagSection">
-                        <Tags tags={tags}/>
-                        <Rating rating={rating}/>
-                    </div>
-                    <div className="dropDownSection">
-                        <Accordion header="Description" content={description} defaultOpen={true}/>
-                        <Accordion header="Équipements" content={equipments} defaultOpen={true}/>
-                    </div>
-            </div>
-
+        <div className='bodyAccommodationId'>
+        {dataAccommodation &&<div className='topSlider'><Slider pictures={dataAccommodation.pictures} alt={dataAccommodation.title}/></div>}
+                <div className="infoSection">
+                        <div className="infoSectionLocation">
+                                <h1 className="infoSectionTitle">{dataAccommodation.title}</h1>
+                                <span>{dataAccommodation.location}</span>
+                        </div>
+                            <div className="hostDetails">
+                            {dataAccommodation &&
+<span className="hostName">{dataAccommodation.host.name}</span>}
+{dataAccommodation &&
+<img src={dataAccommodation.host.picture} alt={dataAccommodation.host.name + "photo de profil"} className="hostPicture"/>}
+                            </div>
+                        
+                            {dataAccommodation &&<div className="tagSection">
+                            <Tags tags={dataAccommodation.tags}/>
+                            <Rating rating={dataAccommodation.rating}/>
+                        </div>}
+                        {dataAccommodation &&<div className="dropDownSection">
+                            <Accordion header="Description" content={dataAccommodation.description} defaultOpen={true}/>
+                            <Accordion header="Équipements" content={dataAccommodation.equipments} defaultOpen={true}/>
+                        </div>}
+                </div>
+    
 </div>
+    
+
     );
 };
 

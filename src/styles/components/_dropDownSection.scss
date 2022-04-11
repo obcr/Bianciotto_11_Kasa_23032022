@@ -1,5 +1,31 @@
 .dropDownSection{
     display: flex;
+    width: 100%;
     justify-content: space-between;
-    margin-bottom: 20px;
+    flex-wrap: wrap;
 }
+
+.dropDownSectionHeader {
+    background-color: $color-1;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5px 10px;
+}
+
+.dropDownSectionTitle {
+    color: white;
+}
+
+.dropDownSectionContent {
+    font-family: $font-1;
+    color: $color-1;
+    padding: 15px;
+    background-color: #F7F7F7;
+}
+.dropDownSectionContent__hidden {
+    display: none;
+}
+
+

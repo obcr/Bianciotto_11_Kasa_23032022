@@ -37,24 +37,31 @@
 // @use '../abstract/' as a;
 
 .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     max-width: 1240px;
     max-height: 415px;
+    border-radius: 25px;
     position: relative;
     overflow: hidden;
 
     &-button {
+            display: flex;
+            justify-content: space-around;
         background: none;
         border: none;
         position: absolute;
-        top: 0;
-        bottom: 0;
         cursor: pointer;
+        img{
+            width: 20%;
+        }
 
         &.next {
-            right: 0;
+    right: -70px;
         }
         &.previous {
-            left: 0;
+    left: -70px;
         }
     }
 }

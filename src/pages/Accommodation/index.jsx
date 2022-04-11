@@ -24,7 +24,7 @@ useEffect(() => {
     return (
         <div className='bodyAccommodationId'>
         {dataAccommodation &&<div className='topSlider'><Slider pictures={dataAccommodation.pictures} alt={dataAccommodation.title}/></div>}
-                <div className="infoSection">
+        {dataAccommodation &&<div className="infoSection">
                         <div className="infoSectionLocation">
                                 <h1 className="infoSectionTitle">{dataAccommodation.title}</h1>
                                 <span>{dataAccommodation.location}</span>
@@ -32,10 +32,10 @@ useEffect(() => {
                             <div className="hostDetails">
                             {dataAccommodation &&
 <span className="hostName">{dataAccommodation.host.name}</span>}
-{dataAccommodation &&
-<img src={dataAccommodation.host.picture} alt={dataAccommodation.host.name + "photo de profil"} className="hostPicture"/>}
+
+<img src={dataAccommodation.host.picture} alt={dataAccommodation.host.name + "photo de profil"} className="hostPicture"/>
                             </div>
-                        
+        </div>}
                             {dataAccommodation &&<div className="tagSection">
                             <Tags tags={dataAccommodation.tags}/>
                             <Rating rating={dataAccommodation.rating}/>
@@ -46,7 +46,7 @@ useEffect(() => {
                         </div>}
                 </div>
     
-</div>
+
     
 
     );

@@ -10,12 +10,12 @@ const Accordion = ({ content, header, defaultOpen }) => {
   (typeof content === 'string') ? displayedContent = [content] : displayedContent = content
   
   return ( 
-      <div className="accordion">
-          <div className="accordion-header" onClick={() => setState(!isOpen)}>
-              <span className="accordion-title">{header}</span>
+      <div className="dropDownSection">
+          <div className="dropDownSectionHeader" onClick={() => setState(!isOpen)}>
+              <span className="dropDownSectionTitle">{header}</span>
               <img src={chevron_up_solid} alt="arrow" className="accordion-arrow" onClick={() => setState(!isOpen)}/>
           </div>
-          <div className={isOpen ? 'accordion-content' : 'accordion-content__hidden'}>
+          <div className={isOpen ? 'dropDownSectionContent' : 'dropDownSectionContent__hidden'}>
           {
               displayedContent.map(item => {
                   return (

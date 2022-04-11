@@ -1,0 +1,133 @@
+
+
+
+
+// .infoSection {
+//     display: flex;
+//     justify-content: center;
+//     flex-wrap: wrap;
+//     width: 90%;
+// }
+
+// .infoSectionOverview {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     width: 100%;
+// }
+
+// .infoSectionLocation {
+//     margin-bottom: 20px;
+//     // .span{
+//     //     font-family: $font-1;
+//     //     font-size: 10px;
+//     // }
+// }
+
+// .infoSectionTitle {
+//     font-family: $font-1;
+//     font-size: 10px;
+//     font-weight: 500;
+//     font-size: 30px;
+// }
+
+// .hostDetails {
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     font-family: $font-1;
+//     font-size: 10px;
+//     width: 150px;
+// }
+
+// .hostPicture {
+//     border-radius: 50%;
+//     height: 50px;
+//     width: 50px;
+// }
+
+// .accomodation-data {
+//     display: flex;
+//     justify-content: space-between;
+//     margin-bottom: 20px;
+//     width: 100%;
+// }
+
+// .accomodation-details {
+//     display: flex;
+//     width: 100%;
+//     justify-content: space-between;
+//     flex-wrap: wrap;
+
+//     /* & .accordion {
+//         width: 45%;
+//     } */
+// }
+
+
+
+
+.accomodation {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 90%;
+}
+
+.infoSection {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.infoSectionLocation {
+    margin-bottom: 20px;
+    font-family: $font-1;
+    color: $color-1;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.infoSectionTitle {
+    font-family: $font-1;
+    color: $color-1;
+    font-weight: 500;
+    font-size: 30px;
+}
+
+.hostDetails {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 150px;
+}
+
+.hostName{
+    font-family: $font-1;
+    color: $color-1;
+}
+
+.hostPicture {
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+}
+
+.infoSectionData {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.infoSectionDetails {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    /* & .accordion {
+        width: 45%;
+    } */
+}

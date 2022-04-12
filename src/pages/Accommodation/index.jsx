@@ -18,7 +18,7 @@ useEffect(() => {
     setDataAccommodation(res.data.find(dataAppartement => dataAppartement.id === id))
     console.log(res.data.find(dataAppartement => dataAppartement.id === id));
     console.log('Data Accommodation Egale quoi', dataAccommodation);
-});
+}); 
     },[id])
 
     return (

@@ -5,7 +5,7 @@ import "./styles/index.scss"
 import Home from './pages/Home'
 import About from './pages/About'
 import Accommodation from './pages/Accommodation'
-import Error from './components/Error'
+import NotFound from './pages/NotFound'
 import Header from './components/Header';
 import Footer from './components/Footer';
 
@@ -20,7 +20,7 @@ ReactDOM.render(
         <Route path="/" element={<Home />}/>
         <Route path="/About/" element={<About/>}/>
         <Route path="/Accommodation/:id" element={<Accommodation/>}/>
-        <Route path="*" element={<Error/>} />
+        <Route path="*" element={<NotFound/>} />
     </Routes>
 <Footer/>
 

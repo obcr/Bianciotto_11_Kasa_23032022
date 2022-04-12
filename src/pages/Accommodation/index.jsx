@@ -36,14 +36,16 @@ useEffect(() => {
 <img src={dataAccommodation.host.picture} alt={dataAccommodation.host.name + "photo de profil"} className="hostPicture"/>
                             </div>
         </div>}
-                            {dataAccommodation &&<div className="tagSection">
+                            {dataAccommodation &&<div className="tagsRatingsSection">
                             <Tags tags={dataAccommodation.tags}/>
                             <Rating rating={dataAccommodation.rating}/>
                         </div>}
+
                         {dataAccommodation &&<div className="dropDownSection">
                             <Accordion header="Description" content={dataAccommodation.description} defaultOpen={true}/>
                             <Accordion header="Équipements" content={dataAccommodation.equipments} defaultOpen={true}/>
                         </div>}
+
                 </div>
     
 

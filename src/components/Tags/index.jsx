@@ -1,9 +1,16 @@
 import React from 'react';
 
-const Tags = () => {
+const Tags = ({ tags }) => {
     return (
         <div className='tag'>
-            <h1>tag-name</h1>
+                        {
+                tags.map(tag => {
+                    return (
+                        <div className='tags' key={tag}>{tag}</div>
+                    )
+                    }
+                )
+            }
         </div>
     );
 };

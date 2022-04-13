@@ -3,12 +3,22 @@
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: space-between;
+    width: 100%
 }
+
+.dropDownSectionAbout{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    width: 60%;
+}
+
 
 .dropDown{
     display: flex;
     flex-direction: column;
-    width: 582px;
+    width: 100%;
 }
 
 .dropDownHeader {
@@ -39,13 +49,8 @@
     display: none;
 }
 
-.chevron_down_solid {
-    width: 30PX;
-    &:active {
-      transform: rotate(180deg);
-   }
-}
-.accordion-arrow {
-    width: 22PX;
+.FaChevronDown-arrow {
+    font-size: larger;
+    color: #fff;
 }
 

@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import chevron_up_solid from '../../asset/img/chevron_up_solid.png'
+import { FaChevronDown } from 'react-icons/fa'
 
+const Accordion = ({ content, header, defaultClose }) => {
 
-const Accordion = ({ content, header, defaultOpen }) => {
-
-  const [isOpen, setState] = useState(defaultOpen)
+  const [isOpen, setState] = useState(defaultClose)
+  const rotate = isOpen ? 'rotate(180deg)' : 'rotate(0)'
+  const rotation = { transform: rotate, transition: '0.6s ease-in-out' }
 
   let displayedContent
   (typeof content === 'string') ? displayedContent = [content] : displayedContent = content
@@ -13,7 +15,7 @@ const Accordion = ({ content, header, defaultOpen }) => {
       <div className="dropDown">
           <div className="dropDownHeader" onClick={() => setState(!isOpen)}>
               <span className="dropDownTitle">{header}</span>
-              <img src={chevron_up_solid} alt="arrow" className="accordion-arrow" onClick={() => setState(!isOpen)}/>
+              <FaChevronDown style={rotation} alt="arrow" className="FaChevronDown-arrow" onClick={() => setState(!isOpen)}/>
           </div>
           <div className={isOpen ? 'dropDownContent' : 'dropDownContent__hidden'}>
           {
@@ -34,7 +36,31 @@ const Accordion = ({ content, header, defaultOpen }) => {
 export default Accordion;
 
 
+// import { FaChevronDown } from 'react-icons/fa'
+// import './Dropdown.scss'
 
+
+// function Dropdown({ title, children}) {
+//   const [isOpen, setIsOpen] = useState(false)
+//   const rotate = isOpen ? 'rotate(180deg)' : 'rotate(0)'
+//   const rotation = { transform: rotate, transition: '0.6s ease-in-out' }
+
+//   return (
+//     <div className="dropdown">
+//       <div className="dropdown-box" onClick={(e) => {setIsOpen(!isOpen)}}>
+//         <span>{title}</span>
+//         <FaChevronDown style={rotation} />
+//       </div>
+//       {isOpen && (
+//         <div className="dropdown-content">
+//           {children}
+//         </div>
+//       )}
+//     </div>
+//   )
+// }
+
+// export default Dropdown
 
 
 

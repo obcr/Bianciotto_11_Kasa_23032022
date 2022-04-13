@@ -40,12 +40,10 @@ useEffect(() => {
                             <Tags tags={dataAccommodation.tags}/>
                             <Rating rating={dataAccommodation.rating}/>
                         </div>}
-
                         {dataAccommodation &&<div className="dropDownSection">
                             <Accordion header="Description" content={dataAccommodation.description} defaultOpen={true}/>
                             <Accordion header="Équipements" content={dataAccommodation.equipments} defaultOpen={true}/>
                         </div>}
-
                 </div>
     
 

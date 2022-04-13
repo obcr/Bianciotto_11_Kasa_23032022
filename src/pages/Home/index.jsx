@@ -3,11 +3,10 @@ import Gallery from '../../components/Gallery';
 import SectionTop from '../../components/SectionTop';
 
 
-
 const Home = () => {
   return (
     <div>
-      <SectionTop/>
+      <SectionTop />
       <Gallery />
     </div>
   );

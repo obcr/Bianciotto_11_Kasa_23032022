@@ -15,15 +15,15 @@
         border: none;
         position: absolute;
         cursor: pointer;
-        img{
-            width: 20%;
-        }
-
         &.next {
-    right: -70px;
+    right: 40px;
+    font-size: xxx-large;
+    color: $color-2;
         }
         &.previous {
-    left: -70px;
+    left: 40px;
+    font-size: xxx-large;
+    color: $color-2;
         }
     }
 }
@@ -47,6 +47,10 @@
     font-weight: 700;
 }
 
+.FaChevronLeftRight{
+    z-index: 10;
+    color: $color-1;
+}
 @keyframes sliderFadeIn {
     0% {
         opacity: 0;

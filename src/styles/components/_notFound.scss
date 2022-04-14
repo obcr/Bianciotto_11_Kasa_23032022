@@ -1,0 +1,23 @@
+.notFound{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 7vw;
+    color: $color-1;
+    font-weight: bold;
+    span {
+      font-family: $font-1;
+      font-size: 288px;
+    }
+    p {
+      font-family: $font-1;
+      font-size: 36px;
+    }
+    a {
+      font-family: $font-1;
+      font-size: 18px;
+      margin-top: 10vw;
+      color: $color-1;
+    }
+}

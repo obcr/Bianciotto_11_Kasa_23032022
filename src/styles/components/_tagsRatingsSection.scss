@@ -1,8 +1,11 @@
 .tagsRatingsSection{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 20px;
     width: 100%;
+    max-width: 1240px;
+    margin: auto;
 }
 
 .tag{

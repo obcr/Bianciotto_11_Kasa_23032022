@@ -2,11 +2,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: auto;
+    width: 100%;
     max-width: 1240px;
     max-height: 415px;
     border-radius: 25px;
     position: relative;
     overflow: hidden;
+    img{
+        display: inherit;
+        width: 100%;
+    }
 
     .FaChevronLeft {
         position: absolute;
@@ -27,24 +33,24 @@
         cursor: pointer;
       }
 
-    &-button {
-            display: flex;
-            justify-content: space-around;
-        background: none;
-        border: none;
-        position: absolute;
-        cursor: pointer;
-        &.next {
-    right: 40px;
-    font-size: xxx-large;
-    color: $color-2;
-        }
-        &.previous {
-    left: 40px;
-    font-size: xxx-large;
-    color: $color-2;
-        }
-    }
+    // &-button {
+    //         display: flex;
+    //         justify-content: space-around;
+    //     background: none;
+    //     border: none;
+    //     position: absolute;
+    //     cursor: pointer;
+    //     &.next {
+    // right: 40px;
+    // font-size: xxx-large;
+    // color: $color-2;
+    //     }
+    //     &.previous {
+    // left: 40px;
+    // font-size: xxx-large;
+    // color: $color-2;
+    //     }
+    // }
 }
 
 .slider-picture {

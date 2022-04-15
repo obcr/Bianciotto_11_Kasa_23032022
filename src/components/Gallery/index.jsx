@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import axios from "axios";
 import Thumb from "../Thumb";
 import { Link } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 
 const Gallery = () => {
 const [data, setData] = useState([]);
@@ -10,14 +11,11 @@ const [data, setData] = useState([]);
 useEffect(() => {
 axios.get('./flat.json').then((res) => {
 setData(res.data)});
-
 },[])
 
-// useEffect(() => {
-//     axios.get('./flat.json').then((res) => {console.log('data egale', res.data)
-//     setData(res.data)});
-    
-//     },[])
+if(data.id !== data) {
+  return <Navigate to='/*' />
+}
 
     return (
         <div className='gallery'>

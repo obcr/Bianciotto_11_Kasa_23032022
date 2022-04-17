@@ -25,30 +25,31 @@ useEffect(() => {
         <div className='bodyAccommodationId'>
         {dataAccommodation &&<div className='topSlider'><Slider pictures={dataAccommodation.pictures} alt={dataAccommodation.title}/></div>}
         {dataAccommodation &&<div className="infoSection">
+            <div className="infoSectionLocationLeft">
                         <div className="infoSectionLocation">
                                 <h1 className="infoSectionTitle">{dataAccommodation.title}</h1>
-                                <span>{dataAccommodation.location}</span>
+                                <span className="infoSectionSubTitle">{dataAccommodation.location}</span>
                         </div>
+                    <Tags tags={dataAccommodation.tags}/>
+            </div>
+        
+                            {dataAccommodation &&<div className="tagsRatingsSection">
                             <div className="hostDetails">
                             {dataAccommodation &&
 <span className="hostName">{dataAccommodation.host.name}</span>}
 
 <img src={dataAccommodation.host.picture} alt={dataAccommodation.host.name + "photo de profil"} className="hostPicture"/>
                             </div>
-        </div>}
-                            {dataAccommodation &&<div className="tagsRatingsSection">
-                            <Tags tags={dataAccommodation.tags}/>
                             <Rating rating={dataAccommodation.rating}/>
-                        </div>}
+                            </div>}
+        </div>}
+
                         {dataAccommodation &&<div className="dropDownSection">
                             <Accordion header="Description" content={dataAccommodation.description} defaultOpen={true}/>
                             <Accordion header="Équipements" content={dataAccommodation.equipments} defaultOpen={true}/>
                         </div>}
-                </div>
-    
 
-    
-
+        </div>
     );
 };
 

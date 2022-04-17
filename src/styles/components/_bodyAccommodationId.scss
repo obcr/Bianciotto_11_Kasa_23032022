@@ -1,8 +1,11 @@
 .bodyAccommodationId {
     display: flex;
     flex-direction: column;
-    margin: auto;
     width: 100%;
+    max-width: 1240px;
+    min-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
     flex-wrap: wrap;
     // .Slider {
     //     margin-bottom: 20px;

@@ -1,12 +1,21 @@
 .dropDownSection{
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start;
     justify-content: space-between;
     width: 100%;
     max-width: 1240px;
-    margin: auto;
+    min-width: 380px;
+    margin-left: auto;
+    margin-right: auto;
+    @media screen and (max-width: 425px) {
+        flex-wrap: wrap;
+        gap: 0;
+      }
 }
+
+
 
 .dropDownSectionAbout{
     display: flex;

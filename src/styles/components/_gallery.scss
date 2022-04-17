@@ -2,14 +2,21 @@
   display: flex;
   flex-wrap: wrap;
   width: 100%;
+  max-width: 1240px;
   min-width: 380px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
   margin-bottom: 50px;
   background-color: #f6f6f6;
   border-radius: 25px;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  padding-top: 5px;
+  padding-top: 5px;
   justify-content: space-around;
+  @media screen and (max-width: 425px) {
+    border-radius: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+  }
   ul {
     display: flex;
     flex-wrap: wrap;
@@ -38,6 +45,10 @@
     background: $color-2;
     border-radius: 20px;
     box-shadow: -2px -2px 8px white, 2px 2px 8px rgba(black, 0.5);
+    @media screen and (max-width: 425px) {
+      border-radius: 10px;
+      padding-top: 0px;
+    }
   
     @mixin track-style {
       display: flex;

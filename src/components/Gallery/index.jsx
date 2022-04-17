@@ -13,9 +13,9 @@ axios.get('./flat.json').then((res) => {
 setData(res.data)});
 },[])
 
-if(data.id !== data) {
-  return <Navigate to='/*' />
-}
+// if(data.id !== setData) {
+//   return <Navigate to='/*' />
+// }
 
     return (
         <div className='gallery'>

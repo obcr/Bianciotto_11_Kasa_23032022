@@ -23,6 +23,11 @@
     margin: auto;
     align-items: center;
     width: 60%;
+    @media screen and (max-width: 425px) {
+        width: 100%;
+        margin: auto;
+        min-width: 380px;
+      }
 }
 
 

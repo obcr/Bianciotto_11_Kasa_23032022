@@ -13,7 +13,7 @@ axios.get('./flat.json').then((res) => {
 setData(res.data)});
 },[])
 
-// if(data.id !== setData) {
+// if(data.idkey !== setData) {
 //   return <Navigate to='/*' />
 // }
 
@@ -34,6 +34,9 @@ setData(res.data)});
                         // .slice(0, rangeValue)
                         .map((dataAppartement, idKey) => {
                             const path = '/Accommodation/' + dataAppartement.id
+//                             if(path !== '/Accommodation/' + dataAppartement.id) {
+//   return <Navigate to='/*' />
+// }
                         return (
                             
                             <Link to={path} key={idKey}><Thumb key={idKey} dataAppartement={dataAppartement}/></Link>

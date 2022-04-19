@@ -5,19 +5,28 @@
     text-align: center;
     margin: 7vw;
     color: $color-1;
-    font-weight: bold;
+    font-weight: 700;
     span {
       font-family: $font-1;
       font-size: 288px;
+      @media screen and (max-width: 425px) {
+        font-size: 96px;
+      }
     }
     p {
       font-family: $font-1;
       font-size: 36px;
+      @media screen and (max-width: 425px) {
+        font-size: 18px;
+      }
     }
     a {
       font-family: $font-1;
       font-size: 18px;
       margin-top: 10vw;
       color: $color-1;
+      @media screen and (max-width: 425px) {
+        font-size: 14px;
+      }
     }
 }

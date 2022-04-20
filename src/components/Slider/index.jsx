@@ -15,9 +15,7 @@ const Slider = ({ pictures }) => {
   if (picturesLength === 1) {
     return (
       <div className="slider">
-        {pictures.map((slide, index) => {
-          return <>{index === sliderAnimation && <img src={slide} alt="housing"/>}</>
-        })}
+  <img src={pictures[0]} alt="housing"/>
       </div>
     )
   } else {
@@ -25,21 +23,17 @@ const Slider = ({ pictures }) => {
       <div className="slider">
         <FaChevronLeft className='FaChevronLeft' onClick={prevSlide} />
         <FaChevronRight className='FaChevronRight' onClick={nextSlide} />
-        {pictures.map((slide, index) => {
-          return (
-            <div
-              className={index ===sliderAnimation ? 'slide-active' : 'slide'}
-              key={index}
+        <div
+              className='slide-active'
             >
-              {index === sliderAnimation && (
-                <img key={index} src={slide} alt="housing" />
-              )}
+ 
+                <img src={pictures[sliderAnimation]} alt="housing" />
+
               <span className="slider-counter">
                 {sliderAnimation + 1}/{picturesLength}
               </span>
             </div>
-          )
-        })}
+      
       </div>
     )
   }

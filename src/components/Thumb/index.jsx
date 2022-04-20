@@ -1,7 +1,7 @@
 import React from 'react';
 
 const Thumb = ({dataAppartement}) => {
-console.log(dataAppartement);
+// console.log(dataAppartement);
 
      return (
          <li className='thumb'>

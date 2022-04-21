@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import chevron_up_solid from '../../asset/img/chevron_up_solid.png'
 import { FaChevronDown } from 'react-icons/fa'
 
 const Accordion = ({ content, header, defaultClose }) => {

@@ -19,7 +19,7 @@ useEffect(() => {
     // console.log(res.data.find(dataAppartement => dataAppartement.id === id));
     // console.log('Data Accommodation Egale quoi', dataAccommodation);
 }); 
-    },[dataAccommodation, id])
+    },[id])
 
     if(dataAccommodation === undefined) {
         return <Navigate to='/*' />

@@ -2,7 +2,7 @@
   "name": "kasa_app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://obcr.github.io/Bianciotto_11_Kasa_23032022",
+  "homepage": "https://obcr.github.io/Bianciotto_11_Kasa_23032022.github.io/",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.4",
